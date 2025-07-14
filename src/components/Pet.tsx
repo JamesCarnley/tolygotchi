@@ -72,7 +72,7 @@ export const Pet: React.FC<PetProps> = ({ hunger, happiness, health }) => {
   return (
     <View style={styles.container}>
       {/* Pet Body - This will be replaced with layered sprites later */}
-      <View style={[styles.petBody, styles[appearance.animation]]}>
+      <View style={[styles.petBody, styles[appearance.animation as keyof typeof styles] || {}]}>
         <Text style={styles.bodyEmoji}>{appearance.body}</Text>
         
         {/* Pet Face Layer */}

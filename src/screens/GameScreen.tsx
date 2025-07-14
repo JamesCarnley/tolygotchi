@@ -6,10 +6,8 @@ import {
   SafeAreaView,
   Dimensions,
 } from 'react-native';
-import { Pet } from '../components/Pet';
-import { StatusBar } from '../components/StatusBar';
-import { InteractionButton } from '../components/InteractionButton';
-import { usePetState } from '../hooks/usePetState';
+import { Pet, StatusBar, InteractionButton } from '../components';
+import { usePetState } from '../hooks';
 
 const { width, height } = Dimensions.get('window');
 

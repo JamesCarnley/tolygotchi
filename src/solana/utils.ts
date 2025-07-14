@@ -1,6 +1,6 @@
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { createUmi } from '@metaplex-foundation/umi-bundle-defaults';
-import { walletAdapterIdentity } from '@metaplex-foundation/umi-signer-wallet-adapters';
+// import { walletAdapterIdentity } from '@metaplex-foundation/umi-signer-wallet-adapters';
 
 // Solana connection configuration
 const NETWORK = 'devnet'; // Change to 'mainnet-beta' for production
@@ -10,9 +10,10 @@ export const connection = new Connection(clusterApiUrl(NETWORK));
 export const createUmiInstance = (wallet?: any) => {
   const umi = createUmi(clusterApiUrl(NETWORK));
   
-  if (wallet) {
-    umi.use(walletAdapterIdentity(wallet));
-  }
+  // TODO: Add wallet adapter when wallet integration is implemented
+  // if (wallet) {
+  //   umi.use(walletAdapterIdentity(wallet));
+  // }
   
   return umi;
 };
